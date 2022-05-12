@@ -21,7 +21,10 @@ class ICEViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let newCell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
-        newCell.textLabel?.text = "Placeholder Data Here"
+        
+        let cellInfo = ds.persons[indexPath.row]
+        
+        newCell.textLabel?.text = "\(cellInfo.personName)          \(cellInfo.age)             \(cellInfo.location)"
         return newCell
         
     }

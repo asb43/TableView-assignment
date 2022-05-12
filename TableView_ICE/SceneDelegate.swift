@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let myController = window!.rootViewController as! ICEViewController
         
-        var DS:DataStore = DataStore()
+        let DS:DataStore = DataStore()
         myController.ds = DS
         
         
